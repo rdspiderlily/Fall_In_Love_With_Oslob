@@ -125,7 +125,7 @@
             <a href="https://www.tripadvisor.com/AttractionProductReview-g298460-d17517007-Whale_Shark_Snorkeling_w_Tumalog_Falls_Canyoneering_in_Kawasan-Cebu_City_Cebu_Isla.html">More</a>
         </div>
         <div class="activities">
-            <img src="c:pic/Canyoneering in Kawasan 4..jpg" alt="Cayoneering in Kawasan">
+            <img src="pic/Canyoneering in Kawasan 4..jpg" alt="Cayoneering in Kawasan">
             <h3>Cayoneering in Kawasan</h3>
             <p>Embark on an exhilarating canyoning adventure at Kawasan Falls in Oslob, Cebu! Traverse through lush landscapes, 
                 leap into clear blue waters, and navigate the cascading falls. Perfect for thrill-seekers,  
