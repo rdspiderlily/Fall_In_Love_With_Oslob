@@ -1,1 +1,257 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractions</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+        }
 
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .attractions {
+            display: flex;
+            justify-content: center; /* Center the attractions */
+            flex-wrap: wrap;
+            max-width: 1200px; /* Set a maximum width for the container */
+            margin: 0 auto; /* Center the container */
+        }
+
+        .attraction {
+            background-color: #022743;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            overflow: hidden;
+            width: 350px; /* Width for each attraction card */
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            align-items: center; /* Center align items inside */
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%; /* Ensures the slider takes full width */
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%; /* Ensures the image fills the container */
+            height: auto; /* Maintains aspect ratio */
+            max-height: 250px; /* Optional: sets a maximum height */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            border-radius: 8px; /* Optional: rounds the corners of the image */
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .info {
+            padding: 15px;
+            text-align: center; /* Center align the text */
+        }
+
+        .info h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #4682b4;
+        }
+
+        .info p {
+            margin: 5px 0;
+            color: white;
+        }
+
+        .view-more {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .view-more a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .attraction:hover .slides img {
+            transform: scale(1.05); /* Slightly enlarge the image */
+            transition: transform 0.3s ease; /* Smooth transition */
+            filter: brightness(0.8); /* Darken the image slightly */
+        }
+    </style>
+<--- HTML --->
+</head>
+<body>
+
+<header>
+    <h1>Top Attractions in Oslob</h1>
+</header>
+
+<div class="attractions">
+    <div class="attraction">
+        <div class="slider">
+            <div class="slides">
+                <img src="pic/tumalog-falls 1.jpg" alt="Tumalog Falls 1">
+                <img src="pic/tumalog falls 2.jpg" alt="Tumalog Falls 2">
+                <img src="pic/tumalog falls 3.jpg" alt="Tumalog Falls 3">
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+        <div class="info">
+            <h2>Tumalog Falls</h2>
+            <p>Tumalog Falls is a must in Oslob. The sheer size of the fall, the cascading water, 
+                and the enticing turquoise plunge pool make it a worthy attraction in Oslob.</p>
+        </div>
+    </div>
+
+    <div class="attraction">
+        <div class="slider">
+            <div class="slides">
+                <img src="pic/Whale Shark Watching 1.jpg" alt="Whale Shark Watching 1">
+                <img src="pic/Whale Shark Watching 2.jpg" alt="Whale Shark Watching 2">
+                <img src="pic/Whale Shark Watching 3.jpg" alt="Whale Shark Watching 3">
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+        <div class="info">
+            <h2>Whale Shark Watching</h2>
+            <p>Whale shark watching in Oslob, Cebu, offers a unique opportunity to swim alongside these gentle giants in their natural habitat. 
+               Tourists can experience close encounters with the world's largest fish, which are drawn to the area due to local feeding practices.</p>
+        </div>
+    </div>
+
+    <div class="attraction">
+        <div class="slider">
+            <div class="slides">
+                <img src="pic/Cuartel Ruins 1.jpg" alt="Cuartel Ruins 1">
+                <img src="pic/Cuartel Ruins 2.jpg" alt="Cuartel Ruins 2">
+                <img src="pic/Cuartel Ruins 3.jpg" alt="Cuartel Ruins 3">
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+        <div class="info">
+            <h2>Cuartel Ruins</h2>
+            <p>The Cuartel was built in 1860 as a military barrack for the Spanish soldiers. 
+                But when Spain's rule in the Philippines ended in 1898, 
+                the construction was never finished even after the Americans and Japanese came.</p>
+        </div>
+    </div>
+
+    <div class="attraction">
+        <div class="slider">
+            <div class="slides">
+                <img src="pic/Ruins of Oslob 1.jpg" alt="Ruins of Oslob 1">
+                <img src="pic/Ruins of Oslob 2.jpg" alt="Ruins of Oslob 2">
+                <img src="pic/Ruins of Oslob 3.jpg" alt="Ruins of Oslob 3">
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+        <div class="info">
+            <h2>Ruins of Oslob</h2>
+            <p>The ruins of Oslob, Cebu, feature historical structures like the 19th-century Oslob Church 
+                (Nuestra Señora de la Inmaculada Concepción) and a nearby bell tower.</p>
+        </div>
+    </div>
+
+    <div class="attraction">
+        <div class="slider">
+            <div class="slides">
+                <img src="pic/Sumilon Island 1.jpg" alt="Sumilon Island 1">
+                <img src="pic/Sumilon Island 2.jpg" alt="Sumilon Island 2">
+                <img src="pic/Sumilon Island 3.jpg" alt="Sumilon Island 3">
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+        <div class="info">
+            <h2>Sumilon Island</h2>
+            <p>Sumilon Island has rich flora and fauna with the entire island still covered in lush green forests. 
+               It is also home to various species of animals and is often visited by different species of birds.</p>
+        </div>
+    </div>
+
+    <div class="attraction">
+        <div class="slider">
+            <div class="slides">
+                <img src="pic/Our Lady of the Immaculate Conception Church 1.jpg" alt="Our Lady of the Immaculate Conception Church 1">
+                <img src="pic/Our Lady of the Immaculate Conception Church 2.jpg" alt="Our Lady of the Immaculate Conception Church 2">
+                <img src="pic/Our Lady of the Immaculate Conception Church 3.jpg" alt="Our Lady of the Immaculate Conception Church 3">
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+        <div class="info">
+            <h2>Our Lady of the Immaculate Conception Church</h2>
+            <p>Our Lady of the Immaculate Conception Church in Oslob, Cebu, is a historic Roman Catholic church known for its beautiful baroque architecture.</p>
+        </div>
+    </div>
+</div>
+
+<div class="view-more">
+    <a href="activities.html">See Activities to do in Oslob</a>
+</div>
+
+<script>
+    // JavaScript for image slider functionality
+    document.querySelectorAll('.slider').forEach((slider) => {
+        let currentSlide = 0;
+        const slides = slider.querySelectorAll('.slides img');
+
+        function showSlide(index) {
+            currentSlide = index < 0 ? slides.length - 1 : index % slides.length;
+            const offset = -currentSlide * 100;
+            slider.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        slider.querySelector('.prev').addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+
+        slider.querySelector('.next').addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+
+        // Initialize the first slide
+        showSlide(currentSlide);
+    });
+</script>
+</body>
+</html>
