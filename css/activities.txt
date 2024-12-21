@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <style>
+         body {
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #004d66;
+        }
+        header p {
+            font-size: 1em;
+            color: #666;
+        }
+        .activities-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            background-color: #022743;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .activities {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(25% - 40px);
+            min-width: 250px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .activities:hover {
+            transform: translateY(-10px);
+        }
+        .activities img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #004d66;
+        }
+        .activities h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .activities p {
+            font-size: 0.9em;
+            padding: 0 10px;
+            color: #666;
+            flex-grow: 1;
+        }
+        .activities a {
+            display: inline-block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #004d66;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            align-self: center;
+        }
+        .activities a:hover {
+            background-color: #006d8c;
+        }
+        .view-more {
+            text-align: center;
+            margin-top: 20px;
+        }
+         .view-more a {
+           text-decoration: none;
+           color: #007BFF;
+           font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Activities to do in Oslob!</h1>
+    <p>Embark on an unforgettable journey in Oslob, Cebu! Dive into the crystal-clear waters to swim alongside majestic whale sharks and be captivated by the dazzling Sardine Run. 
+       Snorkel with friendly sea turtles and explore a vibrant underwater world. Oslob promises a thrilling adventure filled with breathtaking marine life and natural beauty. 
+       Make memories that will last a lifetime!</p>
+</header>
+
+<main>
+    <div class="activities-container">
+        <div class="activities">
+            <img src="pic/Sea Turtles Tour.jpg" alt="Sea Turtles Tour">
+            <h3>Sea Turtles Tour</h3>
+            <p>The sea turtle tour in Oslob allows participants to snorkel alongside gentle green sea turtles in their natural habitat, 
+                emphasizing conservation and offering a unique marine experience.</p>
+            <a href="https://www.tripadvisor.com/AttractionProductReview-g298460-d26869483-Oslob_Whale_Sharks_and_Moalboal_Sardine_Run_Sea_Turtles_Tour-Cebu_City_Cebu_Island.html">More</a>
+        </div>
+        <div class="activities">
+            <img src="pic/Sardine Run 2.jpg" alt="Sardine Run">
+            <h3>Sardine Run</h3>
+            <p>The sardine run in Oslob offers an exhilarating experience as snorkelers dive into the water to witness massive schools of sardines 
+                swimming in mesmerizing patterns, creating a stunning underwater spectacle.</p>
+            <a href="https://www.tripadvisor.com/AttractionProductReview-g298460-d26869483-Oslob_Whale_Sharks_and_Moalboal_Sardine_Run_Sea_Turtles_Tour-Cebu_City_Cebu_Island.html">More</a>
+        </div>
+        <div class="activities">
+            <img src="pic/Whale Shark Snorkeling at Tumalog Falls.jpg" alt="Whale Shark Snorkeling at Tumalog Falls">
+            <h3>Whale Shark Snorkeling at Tumalog Falls</h3>
+            <p>Swim with majestic whale sharks and relax at the serene Tumalog Falls. 
+               Dive into crystal-clear waters for a thrilling marine adventure, then unwind by the refreshing cascades.</p>
+            <a href="https://www.tripadvisor.com/AttractionProductReview-g298460-d17517007-Whale_Shark_Snorkeling_w_Tumalog_Falls_Canyoneering_in_Kawasan-Cebu_City_Cebu_Isla.html">More</a>
+        </div>
+        <div class="activities">
+            <img src="c:pic/Canyoneering in Kawasan 4..jpg" alt="Cayoneering in Kawasan">
+            <h3>Cayoneering in Kawasan</h3>
+            <p>Embark on an exhilarating canyoning adventure at Kawasan Falls in Oslob, Cebu! Traverse through lush landscapes, 
+                leap into clear blue waters, and navigate the cascading falls. Perfect for thrill-seekers,  
+                Dive into adventure at Kawasan Falls!.</p>
+            <a href="https://www.tripadvisor.com/AttractionProductReview-g298460-d17517007-Whale_Shark_Snorkeling_w_Tumalog_Falls_Canyoneering_in_Kawasan-Cebu_City_Cebu_Isla.html">More</a>
+        </div>
+        <div class="activities">
+            <img src="pic/Island-Hopping.jpg" alt="Island Hopping in Sumilon Island">
+            <h3>Island Hopping in Sumilon Island</h3>
+            <p>Explore the beauty of Sumilon Island through island hopping! Enjoy pristine white sandy beaches, crystal-clear turquoise waters, 
+                and vibrant coral reefs. Dive, snorkel, or simply relax and soak up the sun in this island paradise.</p>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g294261-d554229-Reviews-Sumilon_Island-Cebu_Island_Visayas.html">More</a>
+     </div>
+     <div class="activities">
+        <img src="pic/Bluewater sumilon.jpg" alt="Bluewater Sumilon Island Resort ">
+        <h3>Bluewater Sumilon Island Resort </h3>
+        <p>Bluewater Sumilon Island Resort is a serene getaway located on the picturesque Sumilon Island in Oslob, Cebu. 
+           This 24-hectare coral island offers pristine white sandy beaches, a natural lagoon, and a rich marine sanctuary.</p>
+        <a href="https://www.tripadvisor.com/Attraction_Review-g294261-d554229-Reviews-Sumilon_Island-Cebu_Island_Visayas.html">More</a>
+ </div>
+    </div>
+    <div class="view-more">
+        <a href="attractions.html">Go back to Attractions</a>
+    </div>
+</main>
+<footer>
+</body>
+</html>
 
