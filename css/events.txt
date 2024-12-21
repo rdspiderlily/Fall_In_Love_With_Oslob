@@ -1,1 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Favicon -->
+    <link rel="icon" href="pic/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/events.css">
+    <title>Fall In Love With Oslob</title>
+    <style>   /* CSS */    
+        html {
+            scroll-behavior: smooth;
+        }
+       
+        body {
+            margin: 0;
+            font-family: Helvetica, sans-serif;
+            background-color: #ffffff;
+        }
+       
+        .container001 {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2vw;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+       
+        .con001 {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding: 0;
+        }
+       
+        .con001-2 {
+            flex: 1;
+            padding: 1vw;
+            text-align: justify;
+        }
+       
+        .title-box {
+            background-color: rgb(2, 101, 131);
+            padding: 1vw;
+            text-align: center;
+            margin-bottom: 1vw;
+        }
+       
+        .title-box h2 {
+            font-size: 3.5rem;
+            color: white;
+            margin: 0;
+            font-weight: bold;
+        }
+       
+        .con001-2 p {
+            color: #022c4e;
+            line-height: 1.5em;
+            font-size: 1rem;
+        }
+       
+        .con001-1 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        .con001-1 img {
+            width: 100%;
+            height: auto;
+            margin-top: 1vw;
+        }
+       
+        .slider-title-box {
+          background-color: rgb(24 71 86);
+          padding: 1vw;
+          text-align: center;
+          margin-bottom: 1.5vw;
+          border-radius: 10px;
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+       
+        .slider-title-box h2 {
+          font-size: 2.5rem;
+          color: white;
+          margin: 0;
+          font-weight: bold;
+          line-height: 1.2em;
+        }
+       
+        .slider-section {
+          text-align: center;
+          margin: 23px 0;
+          position: relative;
+        }
+       
+        .slider-container {
+          position: relative;
+          width: 80%;
+          margin: 0 auto;
+          overflow: hidden;
+          border-radius: 10px;
+          background-color: #026583;
+        }
+       
+        .slider {
+          display: flex;
+          transition: transform 0.5s ease;
+        }
+       
+        .slide {
+          flex: 1;
+          text-align: center;
+          min-width: 100%;
+        }
+       
+        .slide img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          max-height: 250px;
+          object-fit: cover;
+        }
+       
+        .slide h1 {
+          font-size: 1.3rem;
+          margin: 10px 0;
+          padding: 0;
+          font-weight: bold;
+          color: #ffffff;
+          text-align: center;
+          line-height: 1.2em;
+        }
+       
+        .slide p {
+          font-size: 0.800rem;
+          color: #ffffff;
+          line-height: 1.5em;
+          margin-top: 10px;
+          padding: 0 10px;
+        }
+       
+        .arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgb(88, 6, 65);
+          color: white;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          border-radius: 50%;
+        }
+       
+        .left-arrow {
+          left: 10px;
+        }
+       
+        .right-arrow {
+          right: 10px;
+        }
+       
+        .indicators {
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+        }
+       
+        .dot {
+          width: 12px;
+          height: 12px;
+          background: #ddd;
+          border-radius: 50%;
+          margin: 0 5px;
+          cursor: pointer;
+        }
+       
+        .dot.active {
+          background: #333;
+        }        
+    </style>
+  </head>
+  <body>
+    <!-- HTML Content -->
+    <header>
+      <div class="oslob">
+        <img class="logo" src="pic/oslob_logo.png" alt="Oslob's Logo">
+        Municipality of Oslob
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="events_and_festivals.html">Events and Festivals</a>
+        <a href="food_and_culture.html">Food and Culture</a>
+        <a href="contact.html">Contact</a>
+        <button id="searchButton"><i class="fas fa-search"></i></button>
+      </nav>
+    </header>
+    <div id="searchOverlay" class="hidden">
+      <div class="search-content">
+        <button id="closeButton" class="close-btn">x</button>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search Here...">
+          <button id="searchButton2">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <script> // Javascript
+      const slider = document.querySelector('.slider');
+      const dots = document.querySelectorAll('.dot');
+      const leftArrow = document.querySelector('.left-arrow');
+      const rightArrow = document.querySelector('.right-arrow');
+
+      let currentIndex = 0;
+
+      function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % dots.length;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + dots.length) % dots.length;
+        updateSlider();
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentIndex = index;
+          updateSlider();
+        });
+      });
+
+      rightArrow.addEventListener('click', nextSlide);
+      leftArrow.addEventListener('click', prevSlide);
+    </script>
+    
+    <!-- HTML Content -->
+    <div class="container001">
+      <div class="con001">
+        <div class="con001-2">
+          <div class="title-box">
+            <h2>TOSLOB FESTIVAL</h2>
+          </div>
+          <p>
+            The main festival in Oslob, Toslob Festival, is celebrated every 8th of December during the Marian feast of the Immaculate
+            Conception. This festival serves as a thanksgiving for bountiful catches and harvests, celebrated with street dancing and
+            pageantry. Originally named the Sadsad Festival, it was later renamed to reflect the town's heritage. <br>
+            <br> <strong>When:</strong> Celebrated in the second week of December
+            <br> <strong>What:</strong> A celebration of the town's people, their talent, and beauty
+            <br> <strong>Why:</strong> A thanksgiving to the Almighty for the blessings and protection given to the town
+            <br> <strong>Features:</strong> Street dancing, loud cheers, and music
+            <br> <strong>How it's celebrated:</strong> The festival is the main highlight of the town's Fiesta
+          </p>
+        </div>
+        <div class="con001-1">
+          <img src="pic/TOSLOBfest1.png" alt="Toslob Festival Image" style="width: 70%; height: auto;">
+          <img src="pic/TOSLOBfest2.png" alt="Toslob Festival Image 2" style="width: 70%; height: auto; margin-top: 1vw;">
+        </div>
+      </div>
+    </div>
+
+    <section class="slider-section">
+      <div class="slider-title-box">  
+      <h2>Delve more into the vibrant events and festivals that Oslob, Cebu has to offer!</h2> <br>
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <img src="pic/festival1.png" alt="Festival 1">
+            <h1><strong>PUROK KAWAYAN SADSAD FESTIVAL</strong></h1>
+              <p>The Purok Kawayan Sadsad Festival is a vibrant street dancing and ritual showdown competition held annually in Barangay Poblacion, Oslob, Cebu, in honor of patron Saint Roque. Celebrated during the third week of August, the festival showcases colorful performances and cultural expressions, reflecting the community's devotion and festive spirit.</p>
+          </div>
+          <div class="slide">
+            <img src="pic/festival2.png" alt="Festival 2">
+            <h1><strong>TUKI FESTIVAL</strong></h1>
+              <p>The Tuki Festival, held annually on November 15 in Barangay Tan-awan, Oslob, Cebu, celebrates the local community's identity and their harmonious relationship with whale sharks, known locally as "tuki." The festival features vibrant street dances, cultural performances, and a ritual showdown, highlighting the significance of whale sharks to the area's heritage and tourism.</p>
+          </div>
+          <div class="slide">
+            <img src="pic/festival3.png" alt="Festival 3">
+            <h1><strong>FIESTA BARANGAY LOOC</strong></h1>
+              <p>The Fiesta in Barangay Looc, Oslob, Cebu, is an annual celebration held on October 1st in honor of St. Thérèse of the Child Jesus, reflecting the community's deep devotion to their patron saint. The festivities typically include a Pontifical Mass, processions, and various cultural activities that bring together locals and visitors alike, fostering a spirit of unity and faith.</p>
+          </div>
+        </div>
+        <button class="arrow left-arrow"><i class="fas fa-chevron-left"></i></button>
+        <button class="arrow right-arrow"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="indicators">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+  </body>
+</html>
 
